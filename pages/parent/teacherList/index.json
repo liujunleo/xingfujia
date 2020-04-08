@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "teacher-item": "/components/teacher-item/index",
+    "van-search": "../../assets/vant/search"
+  }
+}

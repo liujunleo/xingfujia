@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="item">
+    <view class="item-header">
+      <text class="title">充值</text>
+      <text class="price">+100</text>
+    </view>
+    <view class="item-body">
+    <text>2020-04-08 12:34</text>
+      <text>余额： 10000</text>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-header">
+      <text class="title">充值</text>
+      <text class="price">+100</text>
+    </view>
+    <view class="item-body">
+    <text>2020-04-08 12:34</text>
+      <text>余额： 10000</text>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-header">
+      <text class="title">充值</text>
+      <text class="price">+100</text>
+    </view>
+    <view class="item-body">
+    <text>2020-04-08 12:34</text>
+      <text>余额： 10000</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "个人基本信息",
+  "usingComponents": {
+    "van-uploader": "../../assets/vant/uploader",
+    "van-field": "../../assets/vant/field",
+    "van-radio-group": "../../assets/vant/radio-group",
+    "van-radio": "../../assets/vant/radio",
+    "van-popup": "../../assets/vant/popup",
+    "van-icon": "../../assets/vant/icon",
+    "van-button": "../../assets/vant/button"
+  }
+}

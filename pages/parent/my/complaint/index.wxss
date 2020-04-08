@@ -1,0 +1,14 @@
+.container {
+  padding: 40rpx;
+}
+.form {
+  margin-bottom: 20rpx;
+  padding: 40rpx 0;
+}
+.form .textarea {
+  min-height: 200rpx !important;
+  padding: 20rpx 10rpx;
+}
+.form .van-cell {
+  background: #f7f7f7;
+}

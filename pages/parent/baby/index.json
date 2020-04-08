@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "宝宝档案",
+  "usingComponents": {
+    "van-tabs": "../../assets/vant/tabs",
+    "van-tab": "../../assets/vant/tab",
+    "ec-canvas": "/ec-canvas/ec-canvas",
+    "van-datetime-picker": "../../assets/vant/datetime-picker",
+    "van-popup": "../../assets/vant/popup",
+    "van-field": "../../assets/vant/field",
+    "van-button": "../../assets/vant/button",
+    "baby-store": "/components/baby/store/index",
+    "baby-album": "/components/baby/album/index"
+  }
+}

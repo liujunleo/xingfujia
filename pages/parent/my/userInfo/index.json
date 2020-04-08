@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "van-uploader": "../../assets/vant/uploader",
+    "van-field": "../../assets/vant/field",
+    "van-radio-group": "../../assets/vant/radio-group",
+    "van-radio": "../../assets/vant/radio",
+    "van-datetime-picker": "../../assets/vant/datetime-picker",
+    "van-popup": "../../assets/vant/popup",
+    "van-icon": "../../assets/vant/icon",
+    "van-button": "../../assets/vant/button"
+  }
+}

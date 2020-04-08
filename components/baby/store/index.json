@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tabs": "../../assets/vant/tabs",
+    "van-tab": "../../assets/vant/tab",
+    "van-divider": "../../assets/vant/divider",
+    "teacher-item": "/components/teacher-item/index"
+  }
+}

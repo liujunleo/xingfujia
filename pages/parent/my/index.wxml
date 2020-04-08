@@ -1,0 +1,65 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="userInfo">
+    <view class="userInfo-portrait">
+      <image mode="scaleToFill" src="{{user.avatar}}" />
+    </view>
+    <view class="userInfo-desc">
+      <view class="userInfo-name">
+        <text wx:if="{{user.name}}">{{user.name}}</text>
+        <button wx:else class="btn-getUserInfo" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+          获取头像
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="menu">
+    <van-cell-group>
+      <van-cell is-link url="/pages/parent/my/wallet/index">
+        <view slot="title">
+          <view class="title">钱包</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/additionalServices/index">
+        <view slot="title">
+          <view class="title">附加服务</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/nurseryServices/index">
+        <view slot="title">
+          <view class="title">托育服务</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/homeServices/index">
+        <view slot="title">
+          <view class="title">上门服务</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/serviceDetails/index">
+        <view slot="title">
+          <view class="title">宝宝档案</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/order/index">
+        <view slot="title">
+          <view class="title">我的订单</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/serviceDetails/index">
+        <view slot="title">
+          <view class="title">服务评价</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/complaint/index">
+        <view slot="title">
+          <view class="title">投诉建议</view>
+        </view>
+      </van-cell>
+      <van-cell is-link url="/pages/parent/my/serviceDetails/index">
+        <view slot="title">
+          <view class="title">退出登录</view>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</view>

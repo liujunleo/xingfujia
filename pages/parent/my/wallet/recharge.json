@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "钱包充值",
+  "usingComponents": {
+    "van-field": "../../assets/vant/field",
+    "van-button": "../../assets/vant/button"
+  }
+}

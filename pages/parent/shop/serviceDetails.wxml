@@ -1,0 +1,66 @@
+<view class="container">
+  <view class="swiper-box">
+    <swiper bindchange="swiperChange" current="{{current}}" indicator-active-color="#ebebeb" autoplay="Boolean" circular="Boolean">
+      <swiper-item wx:for="{{banners}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" data-link="{{item.target}}">
+        <image src="{{item.link}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </swiper>
+    <view class="dots">
+      <view class="dot{{index == currentIndex ? ' active' : ''}}" wx:for="{{banners}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}"></view>
+    </view>
+  </view>
+  <view class="content">
+    <!-- <view class="p-title">基础信息</view> -->
+    <view class="p">
+      <text class="p-name">服务名称：</text>
+      <text>全身按摩</text>
+    </view>
+    <view class="p">
+      <text class="p-name">服务分类：</text>
+      <text class="p-value">按摩</text>
+    </view>
+    <view class="p">
+      <text class="p-name">服务内容：</text>
+      <text class="p-value">局部按摩</text>
+    </view>
+    <view class="p">
+      <text class="p-name">服务套餐</text>
+       <view class="p-options">
+        <van-button class="p-options-item" type="default" plain size="mini">疗程</van-button>
+        <van-button class="p-options-item" type="primary" plain size="mini">体验套餐</van-button>
+      </view>
+    </view>
+    <view class="p">
+      <text class="p-name">服务收费</text>
+      <view class="p-discount">
+        <text class="price-font">¥1200.00</text>
+        <text>/次</text>
+      </view>
+    </view>
+    <view class="p">
+      <text class="p-name">生产厂家：</text>
+      <text class="p-value">广东省广州市</text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="stepper">
+    <view class="p-title">购买数量</view>
+    <van-stepper value="{{ 1 }}" bind:change="onChange" disable-input="{{true}}"/>
+  </view>
+  <van-goods-action>
+    <view class="total-money">
+      <text>合计：</text>
+      <text class="money">¥6666.66</text>
+    </view>
+    <van-goods-action-button
+      text="加入购物车"
+      type="warning"
+      bind:click="onClickButton"
+    />
+    <van-goods-action-button
+      text="立即下单"
+      bind:click="onClickButton"
+    />
+  </van-goods-action>
+  <cart-enter class="cart-enter"></cart-enter>
+</view>

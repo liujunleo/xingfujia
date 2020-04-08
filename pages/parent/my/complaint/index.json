@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "投诉建议",
+  "usingComponents": {
+    "van-field": "../../assets/vant/field",
+    "van-button": "../../assets/vant/button"
+  }
+}

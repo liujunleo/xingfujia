@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "store-item": "/components/store-item/index",
+    "van-search": "../../assets/vant/search",
+    "van-dropdown-menu": "../../assets/vant/dropdown-menu",
+    "van-dropdown-item": "../../assets/vant/dropdown-item"
+  }
+}

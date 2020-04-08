@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="form">
+    <van-field value="{{ message }}" type="textarea" placeholder="感谢您一直以来的信任与支持，考虑不周之处请提上您的宝贵建议！" autosize border="{{ false }}" input-class="textarea" />
+  </view>
+  <van-button class="btn btn-large" bindtap="confirm">提交</van-button>
+</view>

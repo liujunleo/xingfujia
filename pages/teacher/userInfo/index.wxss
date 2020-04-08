@@ -1,0 +1,49 @@
+.container{
+  position: relative;
+  padding: 30rpx 50rpx 50rpx;
+}
+.form-item {
+  padding: 15rpx 0;
+  display: flex;
+  align-items: center;
+}
+.form-item .title {
+  width: 174rpx;
+}
+.form-item .van-field, .form-item > view {
+ flex: 1;
+}
+.form-item .van-cell {
+  background: #f7f7f7;
+}
+.baby-item {
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 20rpx 40rpx;
+  font-size: 26rpx;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+}
+.baby-item .van-cell {
+  font-size: 26rpx;
+}
+.baby-item .baby-delete{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  transform: translate(50%,-50%);
+  font-size: 40rpx;
+  color: #969799;
+}
+.form-row {
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.baby-item .radio-group {
+  display: flex;
+}
+.baby-item .radio-group .van-radio {
+  margin-right: 40rpx;
+}

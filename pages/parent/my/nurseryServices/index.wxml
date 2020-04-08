@@ -1,0 +1,42 @@
+<view class="container">
+  <van-tabs animated>
+  <van-tab title="全部">
+    <view class="item">
+      <text class="item-name">佛山小牛中心</text>
+      <text>服务状态：托育中</text>
+      <text>服务费用：1000元</text>
+      <text>起止日期：2020.2.22 - 2020.3.31</text>
+      <text>服务老师：刘老师</text>
+      <text>关联宝宝：小明</text>
+      <view class="item-bottom">
+        <van-button class="btn btn-large" size="small" catchtap="onItemTap">再次购买</van-button>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="托育中">
+    <view class="item">
+      <text class="item-name">佛山小牛中心</text>
+      <text>服务状态：托育中</text>
+      <text>服务费用：1000元</text>
+      <text>起止日期：2020.2.22 - 2020.3.31</text>
+      <text>服务老师：刘老师</text>
+      <text>关联宝宝：小明</text>
+      <view class="item-bottom">
+        <van-button class="btn btn-large" size="small" catchtap="onItemTap">再次购买</van-button>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="已完成">
+    <view class="item">
+      <text class="item-name">佛山小牛中心</text>
+      <text>服务状态：托育中</text>
+      <text>服务费用：1000元</text>
+      <text>起止日期：2020.2.22 - 2020.3.31</text>
+      <text>服务老师：刘老师</text>
+      <text>关联宝宝：小明</text>
+      <view class="item-bottom">
+        <van-button class="btn btn-large" size="small" catchtap="onItemTap">再次购买</van-button>
+      </view>
+    </view></van-tab>
+</van-tabs>
+</view>

@@ -1,0 +1,4 @@
+/* pages/parent/shopList/index.wxss */
+.filter {
+  margin-top: 15rpx;
+}

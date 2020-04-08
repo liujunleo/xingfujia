@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "考勤打卡",
+  "usingComponents": {
+    "van-cell": "../../assets/vant/cell",
+    "van-notify": "../../assets/vant/notify",
+    "van-button": "../../assets/vant/button"
+  }
+}

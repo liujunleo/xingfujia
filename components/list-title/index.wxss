@@ -1,0 +1,48 @@
+/* components/list-title/index.wxss */
+
+.list-title {
+  position: relative;
+  height: 72rpx;
+  display: flex;
+  padding: 0 30rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-title::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.list-title::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.list-title .titleText {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.list-title .moreText {
+  font-size: 28rpx;
+  color: #666;
+}

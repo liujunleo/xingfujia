@@ -1,0 +1,23 @@
+page {
+  background-color: #f4f4f4;
+}
+.container {
+}
+.tab-body {
+  display: flex;
+}
+.tab-sidebar {
+}
+.tab-list {
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tab-list .goods-item, .tab-list .service-item {
+  flex: 1;
+  min-width: calc(50% - 10rpx); 
+  max-width: calc(50% - 10rpx); 
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}

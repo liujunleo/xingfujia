@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-button": "../../assets/vant/button",
+    "list-title": "/components/list-title/index",
+    "store-item": "/components/store-item/index",
+    "teacher-item": "/components/teacher-item/index"
+  }
+}

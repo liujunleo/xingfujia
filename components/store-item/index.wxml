@@ -1,0 +1,11 @@
+<button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+  <view class="store-item" data-id="{{data.id}}">
+    <image class="store-cover" src="{{data.cover}}"></image>
+    <view class="store-info">
+      <view class="store-name">{{data.name}}</view>
+      <view class="store-number">托育人数：{{data.number}}</view>
+      <view class="store-address">地址：{{data.address}}</view>
+      <view class="store-station">关联社区服务站：{{data.station}}</view>
+    </view>
+  </view>
+</button>

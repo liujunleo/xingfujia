@@ -1,0 +1,130 @@
+/**index.wxss**/
+.container {
+  margin-bottom: 96rpx;
+}
+
+.swiper-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0 0 25rpx 0 rgba(57, 87, 135, 0.11);
+}
+
+.swiper-box swiper {
+  width: 100%;
+  height: 250rpx;
+}
+
+.swiper-box swiper image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  background-color: #eee;
+}
+
+.swiper-box .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-box .dots .dot {
+  margin: 0 5rpx;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8rpx;
+  transition: all 0.5s;
+}
+
+.swiper-box .dots .dot.active {
+  width: 40rpx;
+  background-color: #fff;
+}
+
+
+.notice-box {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 30rpx;
+}
+
+.notice-box image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+
+.notice-box text {
+  font-size: 20rpx;
+  color: #ea9c20;
+}
+
+.createStation {
+  margin: 10rpx 30rpx 20rpx 30rpx;
+}
+
+.createStation .van-button--default {
+  background: #fd98bc;
+}
+
+.service {
+  margin-bottom: 40rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.service image {
+  width: 60rpx;
+  height: 86rpx;
+  margin-right: 20rpx;
+}
+
+.service text {
+  font-size: 32rpx;
+  color: #ea9c20;
+}
+
+.service .home,
+.service .store {
+  flex: 1;
+  width: 340rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service .home-body,
+.service .store-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service .home {
+  margin-right: 10rpx;
+}
+
+.service .home .van-button--default {
+  background: #e7fdff;
+  padding: 40rpx 0;
+  height: auto;
+  border: 0;
+  border-radius: 20rpx;
+}
+
+.service .store .van-button--default {
+  background: #ffe7e9;
+  padding: 40rpx 0;
+  height: auto;
+  border: 0;
+  border-radius: 20rpx;
+}
+

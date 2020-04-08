@@ -1,0 +1,13 @@
+<!-- pages/parent/shopList/index.wxml -->
+<view class="container">
+  <van-search value="{{searchText}}" placeholder="请输入搜索关键词" bindsearch="onSearch"></van-search>
+  <view class="filter">
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{distanceValue}}" options="{{distanceOption}}" />
+      <van-dropdown-item value="{{areaValue}}" options="{{areaOption}}" />
+    </van-dropdown-menu>
+  </view>
+    <view class="store-list">
+      <store-item class="store-item" data-storeid="{{item.id}}" data-index="{{index}}" catchtap="" data="{{item}}" wx:for="{{stores}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" />
+    </view>
+</view>

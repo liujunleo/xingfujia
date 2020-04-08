@@ -1,0 +1,22 @@
+.container {
+  padding: 30rpx;
+}
+
+.cover {
+  width: 100%;
+}
+
+.details {
+  padding: 20rpx 0;
+}
+
+.details .name {
+  font-size: 32rpx;
+  color: #eba638;
+}
+
+.details .details-item {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 50rpx;
+}

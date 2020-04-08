@@ -1,0 +1,4 @@
+
+<button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+  <van-icon name="/assets/images/cart.png" info="9" size="70rpx"/>
+</button>

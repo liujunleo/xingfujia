@@ -1,0 +1,21 @@
+.container {
+  padding: 30rpx;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group .checkbox {
+  margin-bottom: 30rpx;
+}
+
+.checkbox-group .checkbox+.checkbox {
+  margin-left: 30rpx;
+}
+
+.confirm {
+  display: block;
+  margin: 30rpx auto auto;
+}

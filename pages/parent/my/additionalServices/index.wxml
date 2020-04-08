@@ -1,0 +1,75 @@
+<view class="container">
+  <van-dialog use-slot title="标题" z-index="9"  show="{{ showDialog }}" confirm-button-open-type="getUserInfo" confirm-button-color="#eba638" bind:close="onDialogClose" bind:getuserinfo="getUserInfo">
+    <view class="form">
+      <view class="form-item">
+        <text>选择中心：</text>
+        <button class="pop-btn" hover-class="pop-btn__hover" bindtap="onStoreClick">
+          <text>选择托育中心</text>
+        </button> 
+      </view>
+      <view class="form-item">
+        <text>服务时间：</text>
+        <button class="pop-btn" hover-class="pop-btn__hover" bindtap="onTimeClick">
+          <text>选择服务时间</text>
+        </button> 
+      </view>
+      <view class="form-item">
+        <text>选择老师：</text>
+        <button class="pop-btn" hover-class="pop-btn__hover" bindtap="onTeacherClick">
+          <text>选择服务老师</text>
+        </button> 
+      </view>
+    </view>
+  </van-dialog>
+  <van-action-sheet
+    show="{{ showStore }}"
+    overlay="{{ true }}" 
+    cancel-text="取消"
+    z-index="99"
+    actions="{{ stores }}"
+    bind:close="onStoreClose"
+    bind:select="onSelect"
+  />
+  <van-action-sheet
+    show="{{ showTeacher }}"
+    overlay="{{ true }}" 
+    cancel-text="取消"
+    z-index="99"
+    actions="{{ stores }}"
+    bind:close="onTeacherClose"
+    bind:select="onSelect"
+  />
+  <van-popup show="{{ showTime }}" overlay="{{ true }}" z-index="99" position="bottom" custom-style="height: 40vh;" bind:close="onTimeClose">
+    <van-datetime-picker
+      type="datetime"
+      value="{{ currentDate }}"
+      min-date="{{ minDate }}"
+      bind:input="onInput"
+      formatter="{{ formatter }}"
+    />
+  </van-popup> 
+  <button class="btn-none" hover-class="btn-none__hover" catchtap="onItemTap">
+    <view class="item">
+      <text class="item-name">全身按摩</text>
+      <text>剩余次数：3次</text>
+      <text>有效期：2020.2.22</text>
+      <text>预约状态：无</text>
+      <text>预约时间：无</text>
+      <view class="item-bottom">
+        <van-button class="btn btn-large" size="small" catchtap="onOrderClick">预 约</van-button>
+      </view>
+    </view>
+  </button>
+  <button class="btn-none" hover-class="btn-none__hover" catchtap="onItemTap">
+    <view class="item">
+      <text class="item-name">全身按摩</text>
+      <text>剩余次数：3次</text>
+      <text>有效期：2020.2.22</text>
+      <text>预约状态：无</text>
+      <text>预约时间：无</text>
+      <view class="item-bottom">
+        <van-button class="btn btn-large" size="small" catchtap="onOrderClick">预 约</van-button>
+      </view>
+    </view>
+  </button>
+</view>

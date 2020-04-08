@@ -1,0 +1,33 @@
+page {
+  background-color: #e5e5e5;
+}
+
+.container {
+  padding-top: 120rpx;
+  padding-left: 80rpx;
+  padding-right: 80rpx;
+  padding-bottom: 120rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+}
+
+.title {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.input-box {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.money-flag {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.money-input {
+  flex: 1;
+}

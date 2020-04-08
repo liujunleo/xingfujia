@@ -1,0 +1,42 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="swiper-box">
+    <swiper bindchange="swiperChange" current="{{current}}" indicator-active-color="#ebebeb" autoplay="Boolean" circular="Boolean">
+      <swiper-item wx:for="{{banners}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" data-link="{{item.target}}">
+        <image src="{{item.link}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </swiper>
+    <view class="dots">
+      <view class="dot{{index == currentIndex ? ' active' : ''}}" wx:for="{{banners}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}"></view>
+    </view>
+  </view>
+  <view class="notice-box">
+    <image src="/assets/images/notice.png"></image>
+    <text>本周通知：上了快仨拉萨看风景</text>
+  </view>
+  <view class="createStation">
+    <van-button class="btn btn-large " bindtap="onCreateStationClick">申请建站</van-button>
+  </view>
+  <view class="service">
+    <van-button class="home" bindtap="onHomeServiceClick">
+      <view class="home-body">
+        <image src="/assets/images/home_service.png" mode="widthFix"></image>
+        <text>上门服务</text>
+      </view>
+    </van-button>
+    <van-button class="store" bindtap="onStoreServiceClick">
+      <view class="store-body">
+        <image src="/assets/images/store_service.png" mode="widthFix"></image>
+        <text>机构服务</text>
+      </view>
+    </van-button>
+  </view>
+  <list-title titleText="附近托育中心" moreText="更多中心" url="../../parent/storeList/index"></list-title>
+  <view class="store-list">
+    <store-item class="store-item" data-storeid="{{item.id}}" data-index="{{index}}" catchtap="" data="{{item}}" wx:for="{{stores}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" />
+  </view>
+  <list-title titleText="上门服务老师" moreText="更多老师" url="../../parent/teacherList/index"></list-title>
+  <view class="teacher-list">
+    <teacher-item class="teacher-item" data-teacherid="{{item.id}}" data-index="{{index}}" catchtap="" data="{{item}}" wx:for="{{teachers}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" />
+  </view>
+</view>

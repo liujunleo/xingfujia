@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/parent/my/wallet/index",
+    "pages/parent/my/wallet/record",
+    "pages/parent/my/wallet/withdrawal",
+    "pages/parent/index/index",
+    "pages/parent/my/wallet/recharge",
+    "pages/teacher/clock/index",
+    "pages/teacher/userInfo/index",
+    "pages/teacher/userInfo/skill/index",
+    "pages/parent/baby/index",
+    "pages/parent/baby/album/details",
+    "pages/parent/my/comment/index",
+    "pages/parent/my/index",
+    "pages/parent/my/userInfo/index",
+    "pages/parent/my/order/index",
+    "pages/parent/my/homeServices/index",
+    "pages/parent/my/nurseryServices/index",
+    "pages/parent/my/complaint/index",
+    "pages/parent/my/additionalServices/index",
+    "pages/parent/cart/index",
+    "pages/parent/shop/index",
+    "pages/parent/shop/goodsDetails",
+    "pages/parent/shop/serviceDetails",
+    "pages/parent/storeList/details",
+    "pages/parent/createStation/index",
+    "pages/parent/login/index",
+    "pages/teacher/login/index",
+    "pages/parent/teacherList/index",
+    "pages/parent/storeList/index",
+    "pages/common/userType/index",
+    "pages/teacher/apply/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#e8393f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/parent/index/index",
+        "iconPath": "assets/images/home.png",
+        "selectedIconPath": "assets/images/home_checked.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/parent/shop/index",
+        "iconPath": "assets/images/shop.png",
+        "selectedIconPath": "assets/images/shop_checked.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/parent/baby/index",
+        "iconPath": "assets/images/baby.png",
+        "selectedIconPath": "assets/images/baby_checked.png",
+        "text": "宝宝档单"
+      },
+      {
+        "pagePath": "pages/parent/my/index",
+        "iconPath": "assets/images/my.png",
+        "selectedIconPath": "assets/images/my_checked.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "幸福加",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

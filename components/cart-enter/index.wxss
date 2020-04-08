@@ -1,0 +1,14 @@
+.btn-none {
+  width: 100% !important;
+  height: auto;
+  margin: 0;
+  padding: 20rpx;
+  display: inline-flex;
+  line-height: auto;
+  border: 0;
+  background-color: #fff;
+}
+
+.btn-none__hover {
+  background-color: #f7f7f7 !important;
+}

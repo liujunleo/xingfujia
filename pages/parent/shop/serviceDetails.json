@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-cell": "../../assets/vant/cell",
+    "van-button": "../../assets/vant/button",
+    "van-stepper": "../../assets/vant/stepper",
+    "van-goods-action": "../../assets/vant//goods-action",
+    "van-goods-action-icon": "../../assets/vant//goods-action-icon",
+    "van-goods-action-button": "../../assets/vant//goods-action-button",
+    "cart-enter": "/components/cart-enter/index"
+  }
+}

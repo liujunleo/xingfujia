@@ -1,0 +1,10 @@
+<button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+  <view class="goods-item">
+    <image class="photo" src="/assets/images/home_service.png" mode="scaleToFill"></image>
+    <view class="content">
+      <view class="name">男童经典外套</view>
+      <view class="price">销售价：<text>¥1200.00</text></view>
+      <view class="discount">优惠价：<text>¥1200.00</text></view>
+    </view>
+  </view>
+</button> 

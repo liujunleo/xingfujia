@@ -1,0 +1,49 @@
+<van-tabs animated border="{{false}}">
+  <van-tab title="中心详情">
+    <view class="container">
+      <image class="cover" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg" mode="widthFix"></image>
+      <view class="details">
+        <view class="name">佛山萌娃托管中心</view>
+        <view class="details-item">
+          <text>中心联系人：黎明</text>
+        </view>
+        <view class="details-item">
+          <text>中心联系电话：13698798976</text>
+        </view>
+        <view class="details-item">
+          <text>中心微信：</text>
+          <text>黎明</text>
+        </view>
+        <view class="details-item">
+          <text>托育人数：100人</text>
+        </view>
+        <view class="details-item">
+          <text>中心地址：广东省佛山市顺德区乐从镇光明路</text>
+        </view>
+        <view class="details-item">
+          <text>所属站点：佛山小牛社区服务中心</text>
+        </view>
+        <view class="details-item">
+          <text>站点联系人：小张</text>
+        </view>
+        <view class="details-item">
+          <text>站点联系方式：</text>
+          <text>liu432435</text>
+        </view>
+        <view class="details-item">
+          <text>站点联系地址：广东省佛山市顺德区乐从镇光明路</text>
+        </view>
+        <view class="details-item">
+          <text>站点简介：全省优秀站点，十分突出，没开始放假撒开房间里撒克己复礼萨卡</text>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="中心老师">
+    <view class="line"></view>
+    <view class="teacher-list">
+      <teacher-item class="teacher-item" data-teacherid="{{item.id}}" data-index="{{index}}" catchtap="" data="{{item}}" wx:for="{{teachers}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" />
+    </view>
+    <view class="line"></view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,116 @@
+<view class="container">
+  <view class="form-item">
+    <text class="title">身份证正面：</text>
+    <van-uploader file-list="{{ fileList }}" max-count="1" preview-size="120rpx" bind:after-read="afterRead" bind:delete="onDelete" />
+  </view>
+  <view class="form-item">
+    <text class="title">身份证反面：</text>
+    <van-uploader file-list="{{ fileList }}" max-count="1" preview-size="120rpx" bind:after-read="afterRead" bind:delete="onDelete" />
+  </view>
+  <view class="form-item">
+    <text class="title">姓名：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入家长姓名" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">性别：</text>
+    <van-radio-group class="radio-group" value="{{ item.sex }}" data-index="{{index}}" bind:change="onSexChange">
+      <van-radio name="1">男</van-radio>
+      <van-radio name="2">女</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="form-item">
+    <text class="title">学历：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入联系电话" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">政治面貌</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入微信号" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">籍贯：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">身高(cm)：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入家庭住址" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">体重(kg)：</text>
+    <van-uploader file-list="{{ fileList }}" max-count="1" preview-size="120rpx" bind:after-read="afterRead" bind:delete="onDelete" />
+  </view>
+  <view class="form-item">
+    <text class="title">婚姻状况：</text>
+    <van-radio-group class="radio-group" value="{{ item.sex }}" data-index="{{index}}" bind:change="onSexChange">
+      <van-radio name="1">男</van-radio>
+      <van-radio name="2">女</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="form-item">
+    <text class="title">常用语言：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">工作年限：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">工资意向(元)：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">是否持证：</text>
+    <van-radio-group class="radio-group" value="{{ item.sex }}" data-index="{{index}}" bind:change="onSexChange">
+      <van-radio name="1">男</van-radio>
+      <van-radio name="2">女</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="form-item">
+    <text class="title">求职意向：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">就职城市：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">就职形式：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">现住地址：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">详细信息：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">紧急联系人：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">与本人关系：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">联系人电话：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">民族：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">年龄：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">属相：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <view class="form-item">
+    <text class="title">身份证号码：</text>
+    <van-field class="van-field" clearable value="{{ value }}" border="{{false}}" placeholder="请输入工作" bind:change="onChange" />
+  </view>
+  <van-button class="btn btn-large" bindtap="onConfirmTap">下一步</van-button>
+</view>

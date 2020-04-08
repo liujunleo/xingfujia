@@ -1,0 +1,12 @@
+<view class="container">
+  <van-cell title="黎明" value="2020.02.22" />
+  <van-cell title="上班时间：09:00" border="{{false}}" />
+  <view class="clock">
+    <button class="btn-none" hover-class="btn-none__hover" bindtap="onTap">
+      <view class="clock-title">定位打卡</view>
+      <view class="clock-time">{{time}}</view>
+    </button>
+  </view>
+  <van-cell title="下班时间：18:00" border="{{false}}" />
+  <van-notify id="van-notify" />
+</view>

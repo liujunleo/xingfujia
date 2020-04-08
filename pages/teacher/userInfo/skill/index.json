@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "业务技能信息",
+  "usingComponents": {
+    "van-checkbox-group": "../../assets/vant/checkbox-group",
+    "van-checkbox": "../../assets/vant/checkbox",
+    "van-divider": "../../assets/vant/divider",
+    "van-button": "../../assets/vant/button"
+  }
+}

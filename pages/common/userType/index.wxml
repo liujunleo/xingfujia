@@ -1,0 +1,14 @@
+<!-- pages/common/userType/index.wxml -->
+<view class="container">
+  <image class="logo" src="/assets/images//logo.png" />
+  <van-radio-group class="userType" value="{{userType}}" bindchange="onChange">
+    <van-radio class="userType-itme" name="1">家长</van-radio>
+    <van-radio class="userType-item" name="2">老师</van-radio>
+  </van-radio-group>
+  <van-button class="btn btn-large" bindtap="confirm">立即体验</van-button>
+  <!-- <view class="tips">
+    <text>提示：立即体验即视为同意</text>
+    <text class="link">《xx协议》</text>
+    <text>请仔细阅读后在操作！</text>
+  </view> -->
+</view>

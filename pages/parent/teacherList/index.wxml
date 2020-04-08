@@ -1,0 +1,9 @@
+<!-- pages/parent/shopList/index.wxml -->
+<view class="container">
+  <van-search value="{{searchText}}" placeholder="请输入搜索关键词" bindsearch="onSearch"></van-search>
+    <view class="line"></view>
+    <view class="teacher-list">
+      <teacher-item class="teacher-item" data-teacherid="{{item.id}}" data-index="{{index}}" catchtap="" data="{{item}}" wx:for="{{teachers}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" />
+    </view>
+    <view class="line"></view>
+</view>

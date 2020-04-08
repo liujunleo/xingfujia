@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "附加服务",
+  "usingComponents": {
+    "van-button": "../../assets/vant/button",
+    "van-dialog": "../../assets/vant/dialog",
+    "van-popup": "../../assets/vant/popup",
+    "van-datetime-picker": "../../assets/vant/datetime-picker",
+    "van-action-sheet": "../../assets/vant/action-sheet",
+    "van-picker": "../../assets/vant/picker"
+  }
+}

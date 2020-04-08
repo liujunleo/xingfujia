@@ -1,0 +1,14 @@
+<view class="container">
+  <image class="money-img" src="/assets/images/money.png" />
+  <view class="title">我的钱包</view>
+  <view class="number">¥ 10000</view>
+  <navigator url="/pages/parent/my/wallet/record">
+    <view class="link">零钱明细 ></view>
+  </navigator>
+  <navigator class="recharge" url="/pages/parent/my/wallet/recharge">
+    <van-button type="primary">充 值</van-button>
+  </navigator>
+  <navigator class="withdrawal" url="/pages/parent/my/wallet/withdrawal">
+    <van-button>提 现</van-button>
+  </navigator>
+</view>

@@ -1,0 +1,25 @@
+.container {
+ 
+}
+.item {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+}
+
+.item-header,.item-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-body {
+  margin-top: 10rpx;
+  color: #666;
+}
+.title {
+  font-weight: bold;
+}
+.price {
+  color: #e8a544;
+}

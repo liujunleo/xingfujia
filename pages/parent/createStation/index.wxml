@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="form">
+    <van-field class="field" value="{{ phone }}" label="联系人" clearable placeholder="请输入联系人" border="{{ true }}" />
+    <van-field class="field" value="{{ phone }}" label="联系电话" clearable placeholder="请输入联系电话" border="{{ true }}" />
+    <van-field class="field" value="{{ phone }}" label="建站区域" clearable placeholder="请输入建站区域" border="{{ true }}" />
+    <van-button class="btn btn-large apply" bindtap="confirm">立刻申请</van-button>
+  </view>
+  <view class="content">
+    <view class="p">建站福利说明：</view>
+    <view class="desc">区域人力资源部积极为公司员工争取国家规定应该享受的各项福利，前期江北店与解放碑店员工参加保险种类不一致，解放碑店员工未参加医疗保险，经区域人力资源部努力争取，公司同意为解放碑店新增医疗保险</view>
+    <view class="p">申请建站流程图说明：</view>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg" mode="widthFix"></image>
+  </view>
+</view>

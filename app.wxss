@@ -1,0 +1,123 @@
+/**app.wxss**/
+
+page {
+  color: #333;
+  font-size: 28rpx;
+  --button-primary-background-color: #eba638;
+  --button-primary-border-color: #eba638;
+  --radio-checked-icon-color: #eba638;
+  --dropdown-menu-option-active-color: #eba638;
+  --dropdown-menu-title-active-text-color: #eba638;
+  --tabs-bottom-bar-color: #eba638;
+  --tab-active-text-color: #eba638;
+  --cell-font-size: 28rpx;
+  --button-default-font-size: 32rpx;
+  --sidebar-font-size: 28rpx;
+  --sidebar-selected-border-color: #eba638;
+  --sidebar-selected-text-color: #eba638;
+  --button-normal-font-size: 28rpx;
+  --cell-vertical-padding: 15rpx;
+  --cell-horizontal-padding: 20rpx;
+  --cell-font-size: 28rpx;
+  --action-sheet-item-font-size: 28rpx;
+  --action-sheet-item-height: 100rpx;
+  --dialog-header-padding-top: 48rpx;
+  --button-large-height: 100rpx;
+  --button-default-font-size: 32rpx;
+  --picker-action-font-size: 28rpx;
+  --picker-action-text-color: #eba638;
+  --checkbox-label-margin: 10rpx;
+  --checkbox-checked-icon-color: #eba638;
+}
+
+.btn {
+  width: 100%;
+}
+
+.btn-large {
+  width: 570rpx !important;
+}
+
+.btn .van-button--default {
+  width: 100%;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 50rpx;
+  height: 80rpx;
+  letter-spacing: 3rpx;
+  background: linear-gradient(90deg, #e89b32 0%, #f8ac40 100%);
+}
+
+.van-button {
+  width: 100% !important;
+}
+
+.van-button--mini {
+  font-weight: normal;
+}
+
+.van-dropdown-menu {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.van-ellipsis {
+  font-size: 28rpx;
+}
+
+.van-sidebar-item {
+  text-align: center;
+}
+
+.van-dialog__header {
+  font-size: 32rpx;
+}
+
+.store-list .store-item {
+  position: relative;
+  display: block;
+}
+
+.store-list .store-item+.store-item::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.teacher-list .teacher-item {
+  position: relative;
+  display: block;
+}
+
+.teacher-list .teacher-item+.teacher-item::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}

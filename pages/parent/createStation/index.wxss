@@ -1,0 +1,28 @@
+.container {
+  padding: 0 50rpx 50rpx;
+}
+.form {
+  padding: 20rpx;
+}
+.apply {
+  display: block;
+  margin: auto;
+  margin-top: 30rpx;
+}
+.content {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+}
+.content image{
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.p {
+  line-height: 70rpx;
+  color: #ec9e22;
+}
+.desc {
+  margin-bottom: 10rpx;
+  color: #666;
+  text-indent: 60rpx;
+}

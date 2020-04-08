@@ -1,0 +1,114 @@
+page {
+  background: #f7f7f7;
+}
+
+.container {}
+
+.item {
+  width: 100%;
+  padding: 30rpx 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: normal;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.item-name {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.item-bottom {
+  width: 100%;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.item .btn .van-button--default {
+  height: 60rpx;
+  font-size: 28rpx;
+}
+
+.item .btn-large {
+  width: 200rpx !important;
+}
+
+.pop-btn {
+  position: relative;
+  width: auto !important;
+  height: auto;
+  margin: 0;
+  padding: 0 20rpx 0 0;
+  display: inline-flex;
+  line-height: auto;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #666;
+  border: 0;
+  background: #fff;
+}
+.pop-btn ::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border: 3px solid;
+  border-color: transparent transparent currentColor currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  opacity: 0.8;
+  content: '';
+}
+
+.pop-btn__hover {
+  opacity: 0.7;
+}
+
+.form {
+  padding: 30rpx 60rpx 40rpx 60rpx;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 28rpx;
+}
+
+.form .form-item {
+  display: flex;
+  align-items: center;
+  line-height: 50rpx;
+}
+
+.form .form-item>text {
+  width: 150rpx;
+  font-size: 28rpx;
+}
+
+.form .form-item>view {
+  display: flex;
+}
+.van-action-sheet__cancel,.van-action-sheet__item {
+  width: 100% !important;
+  padding: 0;
+  font-weight: normal;
+}
+
+.btn-none {
+  width: 100% !important;
+  height: auto;
+  margin: 0;
+  margin-bottom: 40rpx;
+  padding: 0;
+  display: inline-flex;
+  line-height: auto;
+  border: 0;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+  background-color: #fff;
+}
+
+.btn-none__hover {
+  background-color: #f7f7f7 !important;
+}

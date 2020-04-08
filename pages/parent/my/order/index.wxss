@@ -1,0 +1,140 @@
+page {
+  background: #f7f7f7;
+}
+
+.container {
+  padding: 30rpx 30rpx;
+}
+
+.item {
+  width: 100%;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: normal;
+  font-size: 28rpx;
+  color: #666;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+}
+.item-row {
+  position: relative;
+  width: 100%;
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.item-row .price {
+  font-size: 26rpx;
+  color: red;
+}
+.item-row .value {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.item-header {
+  position: relative;
+  width: 100%;
+  padding: 30rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.item-header::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.item-header .title {
+  font-size: 26rpx;
+  color: #333;
+}
+.item-header .value {
+  font-size: 24rpx;
+  color: #666;
+}
+.item-body {
+  width: 100%;
+  padding: 30rpx 30rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+.item-photo {
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 20rpx;
+}
+.item-desc {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+.item-name {
+  /* height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  color: #333; */
+  height: 70rpx;
+  line-height: 37rpx;
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.specs {
+  margin-top: 17rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.item .specs .specs-item+ .specs-item {
+  margin-left: 10rpx;
+}
+.item-bottom {
+  width: 100%;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.item .btn .van-button--default {
+  height: 60rpx;
+  font-size: 28rpx;
+}
+
+.item .btn-large {
+  width: 200rpx !important;
+}
+
+.btn-none {
+  width: 100% !important;
+  height: auto;
+  margin: 0;
+  margin-bottom: 40rpx;
+  padding: 0;
+  display: inline-flex;
+  line-height: auto;
+  border: 0;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+  background-color: #fff;
+}
+
+.btn-none__hover {
+  background-color: #f7f7f7 !important;
+}

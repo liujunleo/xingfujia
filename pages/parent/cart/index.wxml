@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="cart-container" wx:if="{{cartList.length > 0}}">
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{cartList}}" wx:key="">
+      <view class="touch-content">
+        <view class="course-item" bindtap="selectedCart" data-index="{{index}}">
+          <view class="checkbox">
+            <image wx:if="{{item.selected}}" class="car-icon" src="/assets/images/icon_circle_checked.png"></image>
+            <image wx:else class="car-icon" src="/assets/images/icon_circle.png"></image>
+          </view>
+          <image class="course-cover" src="{{item.imageUrl}}"></image>
+          <view class="course-info">
+            <view>
+              <view class="course-name">{{item.name}}</view>
+              <view class="course-specs">
+                <text>规格：</text>
+                <van-tag class="course-specs-item" plain>红色</van-tag>
+                <van-tag class="course-specs-item" plain>70cm</van-tag>
+              </view>
+            </view>
+            <view class="course-bottom">
+              <text class="course-price">¥{{item.price}}</text>
+              <text class="course-discount">{{item.discount}}</text>
+              <view class="course-btns">
+                <button class="btn course-reduce {{item.number === 1 ? 'disabled' : ''}}" catchtap="reduce" data-index="{{index}}">
+                  -
+                </button>
+                <text class="input course-text">{{item.number}}</text>
+                <button class="btn course-add" catchtap="add" data-index="{{index}}">+</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="touch-del" catchtap="delete" data-index="{{index}}">删除</view>
+    </view>
+    <!-- 购物车底部栏 -->
+    <view class="car-bottom">
+      <view class="car-bottom-item" bindtap="select">
+        <image wx:if="{{checkAll}}" class="car-icon" src="/assets/images/icon_circle_checked.png" data-index="{{index}}"></image>
+        <image wx:else class="car-icon" src="/assets/images/icon_circle.png" data-index="{{index}}"></image>
+        <text class="checkAll">全选</text>
+      </view>
+      <view class="car-bottom-item">
+        <text>合计：</text>
+        <text class="money">￥{{total}}元</text>
+        <button class="btn-settlement" hover-class="btn-settlement__hover" catchtap="settlementTap">结算</button>
+      </view>
+    </view>
+  </view>
+  <!-- 购物车为空 -->
+  <view class="cart-null" wx:else>
+    <image src="/assets/images/cart.png"></image>
+    <view>购物车是空的 ～</view>
+  </view>
+</view>

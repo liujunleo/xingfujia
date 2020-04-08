@@ -1,0 +1,61 @@
+<view class="container-album">
+  <view class="album-item">
+    <view class="album-item-date">2020.2</view>
+    <view class="album-item-photos">
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册一号</text>
+        </view>
+      </button> 
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册二号</text>
+        </view>
+      </button> 
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册三号</text>
+        </view>
+      </button> 
+    </view>
+  </view>
+
+  <view class="album-item">
+    <view class="album-item-date">2020.2</view>
+    <view class="album-item-photos">
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册一号</text>
+        </view>
+      </button> 
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册二号</text>
+        </view>
+      </button> 
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册三号</text>
+        </view>
+      </button> 
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册四号</text>
+        </view>
+      </button> 
+      <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
+        <view class="photo-item">
+          <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584294627433&di=dc68f748d63c7a105e294e1640f7a1db&imgtype=0&src=http%3A%2F%2F01.imgmini.eastday.com%2Fmobile%2F20180730%2F20180730161446_c8f71a037e3572325f22e9565223df3d_1.jpeg"></image>
+          <text>相册四号</text>
+        </view>
+      </button> 
+    </view>
+  </view>
+</view>

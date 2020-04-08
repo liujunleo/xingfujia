@@ -1,0 +1,21 @@
+<!-- <button class="btn-none" hover-class="btn-none__hover" catchtap="onItemTap"> -->
+  <view class="teacher-item" data-id="{{data.id}}">
+    <image class="teacher-cover" src="{{data.cover}}"></image>
+    <view class="teacher-info">
+      <view class="teacher-name">{{data.name}}</view>
+      <view>从业时间：{{data.year}}年</view>
+      <view>特长：{{data.speciality}}</view>
+      <view >已带人数：{{data.number}}人</view>
+        <view class="teacher-certificate">
+        <text>所获证书：</text>
+          <button catchtap="onCertificateClick" class="certificate-item c1" hover-class="btn-none__hover" size="mini">健康证</button>
+          <button catchtap="onCertificateClick" class="certificate-item c2" hover-class="btn-none__hover" size="mini">教师证</button>
+          <button catchtap="onCertificateClick" class="certificate-item c3" hover-class="btn-none__hover" size="mini">育婴员证</button>
+        </view>
+      <view class="operation">
+        <button catchtap="onOnlineTalkClick" class="operation-item onlinetalk" hover-class="btn-none__hover" size="mini">在线沟通</button>
+        <button catchtap="onReserveClick" class="operation-item" hover-class="btn-none__hover" size="mini">预 约</button>
+      </view>
+    </view>
+  </view>
+<!-- </button> -->

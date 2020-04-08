@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "服务评价",
+  "usingComponents": {
+    "van-field": "../../assets/vant/field",
+    "van-button": "../../assets/vant/button"
+  }
+}

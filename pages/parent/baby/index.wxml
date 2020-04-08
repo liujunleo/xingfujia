@@ -1,0 +1,96 @@
+<van-tabs animated>
+  <van-tab title="宝宝状况">
+    <view class="container">
+      <view class="container-head">
+        <text class="title">基础信息</text>
+        <text>姓名：李晓红</text>
+        <text>年龄：1岁9个月</text>
+        <text>性别：女</text>
+        <text>所属中心：佛山小妮中心</text>
+      </view>
+      <view class="content">
+        <view class="canvas-container">
+          <view class="canvas-head">
+            <view class="canvas-title">宝宝身高</view>
+            <!-- <view class="head-right" >
+              <view class="head-right-item">
+                <text>时间段</text>
+                <view class="" bindtap="showPopup">
+                  <input name="start_date" readonly="readonly" placeholder="请设置起始时间" value="{{start_date}}"></input>
+                </view>
+              </view>
+            </view> -->
+            <!-- start时间选择 -->
+            <!-- <van-popup show="{{ showDatetime1 }}" bind:close="onDatetimeClose1" position="bottom">
+              <view>
+                <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" formatter="{{ formatter }}" bind:confirm="confirmFn" bind:cancel="cancelFn" />
+              </view>
+            </van-popup> -->
+            <!-- end时间选择 -->
+            <!-- <van-popup show="{{ show1 }}" bind:close="onClose" position="bottom">
+              <view>
+                <van-datetime-picker type="date" value="{{ currentDate1 }}" bind:input="onInput1" min-date="{{ minDate }}" formatter="{{ formatter }}" bind:confirm="confirmFn1" bind:cancel="cancelFn" />
+              </view>
+            </van-popup> -->
+          </view>
+          <view class="echarts-container" hidden="{{!isShoweyes || !echartsData.totalRecentRansactions.allTotalMoney}}">
+            <ec-canvas id="mychart-dom-turnover" canvas-id="mychart-turnover" ec="{{ turnoverEc }}"></ec-canvas>
+          </view>
+        </view>
+        <view class="canvas-container">
+          <view class="canvas-head">
+            <view class="canvas-title">宝宝体重</view>
+            <view class="head-right">
+              <view class="head-right-item"></view>
+            </view>
+          </view>
+          <view class="echarts-container" hidden="{{!isShoweyes || !echartsData.shopNewCustomerRespVo.allNewCustomer}}">
+            <ec-canvas id="mychart-dom-customer" canvas-id="mychart-customer" ec="{{ customerEc }}"></ec-canvas>
+          </view>
+        </view>
+        <view class="canvas-container">
+          <view class="canvas-head">
+            <view class="canvas-title">宝宝体温</view>
+            <view class="head-right">
+              <view class="head-right-item"></view>
+            </view>
+          </view>
+          <view class="echarts-container" hidden="{{!isShoweyes || !echartsData.customerOrderAverageRespVo.customerAverage}}">
+            <ec-canvas id="mychart-dom-price" canvas-id="mychart-price" ec="{{ priceEc }}"></ec-canvas>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="温馨提示">
+    <view class="container">
+      <view class="container-reminder-header">
+        <view class="form-reminder">
+          <van-field value="{{ message }}" type="textarea" placeholder="感谢您一直以来的信任与支持，考虑不周之处请提上您的宝贵建议！"  autosize border="{{ false }}" input-class="textarea" />
+        </view>
+        <view class="form-btn">
+          <van-button class="btn btn-large" size="small" catchtap="confirm">提 交</van-button>
+        </view>
+      </view>
+      <view class="reminder-title">历史留言</view>
+      <view class="message-item">
+        <view class="message-item-content">通常text-indent缩进属性将对段落首行开头文本文字进行缩进显示。如果使用html br换行标签，第二个换行开始也不会出现缩进效果。如果使用了html P段落标签段落换行，将会出现每个p段落换行开头都将缩进，这里我们给大家通过案例演示给大家，希望通过DIVCSS5案例掌握CSS text-indent缩进</view>
+        <view class="message-item-datetime">-- 2020.2.22</view>
+      </view>
+      <view class="message-item">
+        <view class="message-item-content">通常text-indent缩进属性将对段落首行开头文本文字进行缩进显示。如果使用html br换行标签，第二个换行开始也不会出现缩进效果。如果使用了html P段落标签段落换行，将会出现每个p段落换行开头都将缩进，这里我们给大家通过案例演示给大家，希望通过DIVCSS5案例掌握CSS text-indent缩进</view>
+        <view class="message-item-datetime">-- 2020.2.22</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="服务中心">
+    <view class="container whitebg">
+      <baby-store/>
+    </view>
+  </van-tab>
+  <van-tab title="宝宝相册">
+    <view class="container whitebg">
+      <baby-album/>
+    </view>
+  </van-tab>
+</van-tabs>

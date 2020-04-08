@@ -1,0 +1,5 @@
+<!-- components/list-title/index.wxml -->
+<view class="list-title">
+  <text class="titleText">{{titleText}}</text>
+  <text class="moreText" bindtap="jump">{{moreText}}</text>
+</view>

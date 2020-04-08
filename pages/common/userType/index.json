@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-radio-group": "../../assets/vant/radio-group",
+    "van-radio": "../../assets/vant/radio",
+    "van-button": "../../assets/vant/button"
+  }
+}

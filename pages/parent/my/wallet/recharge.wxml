@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="title">充值金额：</view>
+  <view class="input-box">
+    <text class="money-flag">¥</text>
+    <van-field class="money-input" value="{{ value }}" placeholder="请输入要充值的金额" border="{{ true }}" bind:change="onChange" />
+  </view>
+</view>

@@ -1,0 +1,74 @@
+page {
+  background-color: #f4f4f4;
+}
+.container {
+  position: relative;
+  margin-bottom: 96rpx;
+  overflow: auto;
+}
+
+.userInfo {
+  height: 320rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+  background-color: #fff;
+}
+
+.userInfo .userInfo-portrait {
+  vertical-align: middle;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.userInfo .userInfo-portrait image {
+  width: 152rpx;
+  height: 152rpx;
+  margin: 4rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.userInfo .userInfo-desc {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userInfo .btn-getUserInfo {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #ff4f4f;
+  border: 0;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.userInfo .btn-getUserInfo:hover {
+  opacity: 0.6;
+}
+
+.userInfo .btn-getUserInfo:after {
+  border: 0;
+}
+
+.userInfo .userInfo-name {
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.menu {
+  margin-bottom: 40rpx;
+  background-color: #fff;
+}
+.menu .title {
+  font-size: 28rpx;
+}

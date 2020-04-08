@@ -1,0 +1,42 @@
+.container {
+  padding-top: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.money-img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.title {
+  margin-top: 60rpx;
+  font-size: 28rpx;
+}
+
+.number {
+  margin-top: 20rpx;
+  font-size: 70rpx;
+  font-weight: bold;
+}
+
+.link {
+  margin-top: 30rpx;
+  color: #e8a544;
+  text-decoration: underline;
+}
+
+.recharge,
+.withdrawal {
+  width: 300rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 28rpx;
+}
+
+.recharge {
+  margin-top: 200rpx;
+  margin-bottom: 30rpx;
+  background-color: #e8a544;
+}

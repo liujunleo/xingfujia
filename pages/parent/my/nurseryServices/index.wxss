@@ -1,0 +1,60 @@
+page {
+  background: #f7f7f7;
+}
+
+.container {}
+
+.item {
+  width: 100%;
+  margin-bottom: 40rpx;
+  padding: 30rpx 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: normal;
+  font-size: 28rpx;
+  color: #666;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+}
+
+.item-name {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.item-bottom {
+  width: 100%;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.item .btn .van-button--default {
+  height: 60rpx;
+  font-size: 28rpx;
+}
+
+.item .btn-large {
+  width: 200rpx !important;
+}
+
+.btn-none {
+  width: 100% !important;
+  height: auto;
+  margin: 0;
+  margin-bottom: 40rpx;
+  padding: 0;
+  display: inline-flex;
+  line-height: auto;
+  border: 0;
+  box-shadow: 0 0 20rpx 0 rgba(70, 117, 230, 0.12);
+  background-color: #fff;
+}
+
+.btn-none__hover {
+  background-color: #f7f7f7 !important;
+}

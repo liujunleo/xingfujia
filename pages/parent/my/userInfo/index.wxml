@@ -1,0 +1,150 @@
+<view class="container">
+  <!-- <view class="form-item">
+    <text class="title">宝宝：</text>
+    <view class="form-row">
+      <text>小明</text>
+      <van-button class="p-options-item" type="primary" plain size="mini">宝宝管理</van-button>
+    </view>
+  </view> -->
+  <!-- 宝宝信息 -->
+  <view class="baby-item" wx:for="{{babyList}}" wx:for-item="item" wx:for-index="index" :key="{{index}}">
+    <view class="form-item">
+      <text class="title">宝宝姓名：</text>
+      <van-field
+        class="van-field"
+        clearable
+        value="{{ item.name }}"
+        border="{{false}}"
+        placeholder="请输入宝宝姓名"
+        data-index="{{index}}"
+        bind:change="onBabyNameChange"
+      />
+    </view>
+    <view class="form-item">
+      <text class="title">宝宝性别：</text>
+      <van-radio-group class="radio-group" value="{{ item.sex }}" data-index="{{index}}" bind:change="onSexChange">
+        <van-radio name="1">男</van-radio>
+        <van-radio name="2">女</van-radio>
+      </van-radio-group>
+    </view>
+    <view class="form-item">
+      <text class="title">宝宝生日：</text>
+      <view data-index="{{index}}" bindtap="onShowDatetimeTap">
+        <van-field
+          class="van-field"
+          clearable
+          value="{{ item.birthday }}"
+          border="{{false}}"
+          readonly="readonly"
+          placeholder="请选择宝宝生日"
+        />
+      </view>
+    </view>
+    <van-icon class="baby-delete" name="clear" data-index="{{index}}" bindtap="onBabyDeleteTap"/>
+  </view>
+  <view class="form-row">
+    <van-button type="primary" plain size="small" bindtap="onAddBabyTap">添加宝宝</van-button>
+  </view>
+  <!-- 时间选择 -->
+  <van-popup show="{{ showDatetime }}" bind:close="onDatetimeClose" position="bottom">
+    <view>
+      <van-datetime-picker type="date" formatter="{{ formatter }}" bind:confirm="onDatetimeConfirm" bind:cancel="onDatetimeClose" />
+    </view>
+  </van-popup>
+  <view class="form-item">
+    <text class="title">个人头像：</text>
+    <van-uploader
+      file-list="{{ fileList }}"
+      max-count="1"
+      preview-size="120rpx"
+      bind:after-read="afterRead"
+      bind:delete="onDelete"
+    />
+  </view>
+  <view class="form-item">
+    <text class="title">家长姓名：</text>
+    <van-field
+      class="van-field"
+      clearable
+      value="{{ value }}"
+      border="{{false}}"
+      placeholder="请输入家长姓名"
+      bind:change="onChange"
+    />
+  </view>
+  <view class="form-item">
+    <text class="title">联系电话：</text>
+    <van-field
+    class="van-field"
+    clearable
+    value="{{ value }}"
+    border="{{false}}"
+    placeholder="请输入联系电话"
+    bind:change="onChange"
+  />
+  </view>
+  <view class="form-item">
+    <text class="title">微信号：</text>
+    <van-field
+    class="van-field"
+    clearable
+    value="{{ value }}"
+    border="{{false}}"
+    placeholder="请输入微信号"
+    bind:change="onChange"
+  />
+  </view>
+  <view class="form-item">
+    <text class="title">工作：</text>
+    <van-field
+    class="van-field"
+    clearable
+    value="{{ value }}"
+    border="{{false}}"
+    placeholder="请输入工作"
+    bind:change="onChange"
+  />
+  </view>
+  <view class="form-item">
+    <text class="title">家庭住址：</text>
+    <van-field
+    class="van-field"
+    clearable
+    value="{{ value }}"
+    border="{{false}}"
+    placeholder="请输入家庭住址"
+    bind:change="onChange"
+  />
+  </view>
+  <view class="form-item">
+    <text class="title">身份证正面：</text>
+    <van-uploader
+      file-list="{{ fileList }}"
+      max-count="1"
+      preview-size="120rpx"
+      bind:after-read="afterRead"
+      bind:delete="onDelete"
+    />
+  </view>
+  <view class="form-item">
+    <text class="title">身份证反面：</text>
+    <van-uploader
+      file-list="{{ fileList }}"
+      max-count="1"
+      preview-size="120rpx"
+      bind:after-read="afterRead"
+      bind:delete="onDelete"
+    />
+  </view>
+  <view class="form-item">
+    <text class="title">接送人脸：</text>
+    <van-uploader
+      file-list="{{ fileList }}"
+      max-count="1"
+      preview-size="120rpx"
+      bind:after-read="afterRead"
+      bind:delete="onDelete"
+    />
+  </view>
+  <van-button class="btn btn-large" bindtap="confirm">确认修改</van-button>
+</view>
