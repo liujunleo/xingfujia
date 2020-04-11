@@ -1,39 +1,39 @@
 <view class="container">
   <van-tabs animated border="{{false}}">
-  <van-tab title="商品">
-    <van-search value="{{searchText}}" placeholder="请输入您想要搜索的商品" bindsearch="onSearch"></van-search>
-    <view class="tab-body">
-      <view class="tab-sidebar">
-        <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
-          <van-sidebar-item title="全部" />
-          <van-sidebar-item title="日常餐饮" />
-          <van-sidebar-item title="宝宝服饰" />
-          <van-sidebar-item title="益智玩具" />
-        </van-sidebar>
+    <van-tab title="商品">
+      <van-search value="{{searchText}}" placeholder="请输入您想要搜索的商品" bindsearch="onSearch"></van-search>
+      <view class="tab-body">
+        <view class="tab-sidebar">
+          <van-sidebar active-key="{{ activeKey }}" bind:change="onGoodsChange">
+            <van-sidebar-item title="全部" />
+            <block wx:for="{{goodsType}}" wx:for-index="index" wx:for-item="item">
+              <van-sidebar-item title="{{item.name}}" />
+            </block>
+          </van-sidebar>
+        </view>
+        <view class="tab-list">
+          <block wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item">
+            <goods-item class="goods-item" data="{{item}}"></goods-item>
+          </block>
+        </view>
       </view>
-      <view class="tab-list">
-        <goods-item class="goods-item"></goods-item>
-        <goods-item class="goods-item"></goods-item>
-        <goods-item class="goods-item"></goods-item>
+    </van-tab>
+    <van-tab title="服务">
+      <van-search value="{{searchText}}" placeholder="请输入您想要搜索的服务" bindsearch="onSearch"></van-search>
+      <view class="tab-body">
+        <view class="tab-sidebar">
+          <van-sidebar active-key="{{ activeKey }}" bind:change="onServiceChange">
+            <van-sidebar-item title="全部" />
+            <van-sidebar-item title="针灸" />
+            <van-sidebar-item title="按摩" />
+          </van-sidebar>
+        </view>
+        <view class="tab-list">
+          <service-item class="service-item"></service-item>
+          <service-item class="service-item"></service-item>
+          <service-item class="service-item"></service-item>
+        </view>
       </view>
-    </view>
-  </van-tab>
-  <van-tab title="服务">
-    <van-search value="{{searchText}}" placeholder="请输入您想要搜索的服务" bindsearch="onSearch"></van-search>
-    <view class="tab-body">
-      <view class="tab-sidebar">
-        <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
-          <van-sidebar-item title="全部" />
-          <van-sidebar-item title="针灸" />
-          <van-sidebar-item title="按摩" />
-        </van-sidebar>
-      </view>
-      <view class="tab-list">
-        <service-item class="service-item"></service-item>
-        <service-item class="service-item"></service-item>
-        <service-item class="service-item"></service-item>
-      </view>
-    </view>
-  </van-tab>
-</van-tabs>
+    </van-tab>
+  </van-tabs>
 </view>

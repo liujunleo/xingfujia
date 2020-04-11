@@ -26,6 +26,10 @@
 
 }
 
+.resend {
+  width: 200rpx;
+}
+
 .tips {
   margin-top: 10rpx;
   font-size: 22rpx;
