@@ -5,9 +5,13 @@ Page({
    */
   data: {
     activeKey: 0,
-    goodsList: [],
-    goodsType: [],
-    checkedType: ""
+    searchText: "",
+    page: 1,
+    limit: 8,
+    total: 0,
+    list: [],
+    typeList: [],
+    categoryId: ""
   },
   /**
    * 生命周期函数--监听页面显示
@@ -23,52 +27,87 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.getGoodsList();
-    this.getGoodsType();
+    this.getList();
+    this.getTypeList();
   },
-  getGoodsType() {
-    app
-      .post(`/ptmk/ptmkgoodscategory/list`)
-      .then(res => {
-        this.setData({
-          goodsType: res.data
-        });
-      })
-      .catch(res => {
-        console.log("res", res);
-      });
-  },
-  getGoodsList() {
-    const params = {
-      categoryId: 1,
-      limit: 10,
-      name: "",
-      order: "",
-      page: 1,
-      sidx: ""
-    };
-    app
-      .post(`/ptmk/ptmkgoods/list`, params)
-      .then(res => {
-        this.setData({
-          goodsList: res.data.list
-        });
-      })
-      .catch(res => {
-        console.log("res", res);
-      });
-  },
-  onGoodsChange(event) {
-    const item = this.data.goodsType[event.detail - 1];
+  onTabsChange(e) {
     this.setData({
-      checkedType: item ? item.id : ""
+      activeKey: e.detail.name,
+      page: 1,
+      searchText: "",
+      categoryId: ""
     });
+    this.getList();
+    this.getTypeList();
   },
-  onServiceChange(event) {
-    wx.showToast({
-      icon: "none",
-      title: `切换至第${event.detail}项`
+  // 触底事件
+  onReachBottom: function() {
+    const list = this.data.activeKey === 0 ? this.data.list : this.data.serviceList;
+    if (list.length == this.data.total) {
+      return;
+    }
+    this.setData(
+      {
+        page: this.data.page + 1
+      },
+      _ => {
+        this.getList();
+      }
+    );
+  },
+  onSearch(e) {
+    const value = e ? e.detail : this.data.searchText;
+    this.setData({
+      page: 1,
+      searchText: value
     });
+    this.getList();
+  },
+  getTypeList() {
+    const url = this.data.activeKey === 0 ? "/ptmk/ptmkgoodscategory/list" : "/ptmk/ptmkservercategory/list";
+    app
+      .post(url)
+      .then(res => {
+        this.setData({
+          typeList: res.data
+        });
+      })
+      .catch(res => {
+        console.log("res", res);
+      });
+  },
+  getList() {
+    const params = {
+      categoryId: this.data.categoryId,
+      limit: this.data.limit,
+      name: this.data.searchText,
+      page: this.data.page
+    };
+    const url = this.data.activeKey === 0 ? "/ptmk/ptmkgoods/list" : "/ptmk/ptmkserver/list";
+    app.loading();
+    app
+      .post(url, params)
+      .then(res => {
+        let list = this.data.list;
+        if (this.data.page == 1) {
+          this.setData({ list: res.data.list, total: res.data.totalCount });
+        } else {
+          list = list.concat(res.data.list || []);
+          this.setData({ list: list, total: res.data.totalCount });
+        }
+        app.hideLoading();
+      })
+      .catch(res => {
+        console.log("res", res);
+        app.hideLoading();
+      });
+  },
+  onChange(event) {
+    const item = this.data.typeList[event.detail - 1];
+    this.setData({
+      categoryId: item ? item.id : ""
+    });
+    this.onSearch();
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -89,11 +128,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {},
 
   /**
    * 用户点击右上角分享

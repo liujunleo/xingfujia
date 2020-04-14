@@ -2,6 +2,7 @@
   position: relative;
   margin-bottom: 122rpx;
 }
+
 .swiper-box {
   position: relative;
   display: flex;
@@ -46,48 +47,60 @@
   width: 40rpx;
   background-color: #fff;
 }
+
 .content {
   padding: 30rpx;
 }
-.content .p{
+
+.content .p {
   display: flex;
   flex-wrap: wrap;
   line-height: 50rpx;
   color: #333;
 }
+
 .content .p-options {
   display: inline-flex;
   flex-wrap: wrap;
 }
+
 .p-options .p-options-item+.p-options-item {
   margin-left: 10rpx;
 }
+
 .p-title {
   color: #999;
 }
+
 .p-name {
   width: 150rpx;
 }
+
 .p-value {
   color: #999;
 }
+
 .p-price {
   color: #999;
   text-decoration: line-through;
 }
+
 .p-discount {
   font-size: 34rpx;
   color: red;
 }
+
 .stepper {
   padding: 30rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .van-goods-action {
   border-top: 1px solid #e6e6e6;
 }
+
 .total-money {
   margin-right: 30rpx;
   margin-left: 20rpx;
@@ -96,16 +109,19 @@
   font-size: 28rpx;
   color: #999;
 }
+
 .total-money .money {
   font-size: 34rpx;
   color: #e03f44;
 }
+
 .van-goods-action-button--last {
   margin-right: 20rpx !important;
 }
+
 .cart-enter {
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 20rpx;
   z-index: 9;
 }

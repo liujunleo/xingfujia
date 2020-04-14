@@ -13,7 +13,7 @@
     <!-- <view class="p-title">基础信息</view> -->
     <view class="p">
       <text class="p-name">服务名称：</text>
-      <text>全身按摩</text>
+      <text>{{detail.name}}</text>
     </view>
     <view class="p">
       <text class="p-name">服务分类：</text>
@@ -21,46 +21,48 @@
     </view>
     <view class="p">
       <text class="p-name">服务内容：</text>
-      <text class="p-value">局部按摩</text>
+      <text class="p-value">{{detail.countent}}</text>
     </view>
-    <view class="p">
+    <block wx:for="{{detail.specificationList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <view class="p">
+        <text class="p-name">{{item.name}}</text>
+        <view class="p-options">
+          <block wx:for="{{item.list}}" wx:for-index="cIndex" wx:for-item="cItem" wx:key="cIndex">
+            <van-button class="p-options-item" bindtap="onItemTap" type="{{cItem.checked ? 'primary' :'default'}}" plain size="mini" data-cindex="{{cIndex}}" data-index="{{index}}" data-id="{{cItem.id}}">
+              {{cItem.name}}
+            </van-button>
+          </block>
+        </view>
+      </view>
+    </block>
+    <!-- <view class="p">
       <text class="p-name">服务套餐</text>
-       <view class="p-options">
+      <view class="p-options">
         <van-button class="p-options-item" type="default" plain size="mini">疗程</van-button>
         <van-button class="p-options-item" type="primary" plain size="mini">体验套餐</van-button>
       </view>
-    </view>
+    </view> -->
     <view class="p">
       <text class="p-name">服务收费</text>
       <view class="p-discount">
-        <text class="price-font">¥1200.00</text>
+        <text class="price-font" hidden="{{skuPrice === null}}">¥{{skuPrice }}</text>
+        <text class="price-font" hidden="{{skuPrice !== null}}">¥{{detail.preferentialPrice}}</text>
         <text>/次</text>
       </view>
-    </view>
-    <view class="p">
-      <text class="p-name">生产厂家：</text>
-      <text class="p-value">广东省广州市</text>
     </view>
   </view>
   <view class="line"></view>
   <view class="stepper">
     <view class="p-title">购买数量</view>
-    <van-stepper value="{{ 1 }}" bind:change="onChange" disable-input="{{true}}"/>
+    <van-stepper value="{{ 1 }}" bind:change="onNumberChange" disable-input="{{true}}" />
   </view>
   <van-goods-action>
     <view class="total-money">
       <text>合计：</text>
-      <text class="money">¥6666.66</text>
+      <text class="money">¥{{totalMoney}}</text>
     </view>
-    <van-goods-action-button
-      text="加入购物车"
-      type="warning"
-      bind:click="onClickButton"
-    />
-    <van-goods-action-button
-      text="立即下单"
-      bind:click="onClickButton"
-    />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="onCart" />
+    <van-goods-action-button text="立即下单" bind:click="onBuy" />
   </van-goods-action>
   <cart-enter class="cart-enter"></cart-enter>
 </view>

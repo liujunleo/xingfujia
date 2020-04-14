@@ -1,56 +1,52 @@
 <view class="container">
   <view class="swiper-box">
     <swiper bindchange="swiperChange" current="{{current}}" indicator-active-color="#ebebeb" autoplay="Boolean" circular="Boolean">
-      <swiper-item wx:for="{{banners}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}" data-link="{{item.target}}">
-        <image src="{{item.link}}" mode="scaleToFill"></image>
+      <swiper-item wx:for="{{detail.picList}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}">
+        <image src="{{item.url}}" mode="scaleToFill"></image>
       </swiper-item>
     </swiper>
     <view class="dots">
-      <view class="dot{{index == currentIndex ? ' active' : ''}}" wx:for="{{banners}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}"></view>
+      <view class="dot{{index == currentIndex ? ' active' : ''}}" wx:for="{{detail.picList}}" wx:for-item="item" wx:for-index="index" wx:key="{{item.id}}"></view>
     </view>
   </view>
   <view class="content">
     <!-- <view class="p-title">基础信息</view> -->
     <view class="p">
       <text class="p-name">品名：</text>
-      <text>男童经典外套</text>
+      <text>{{detail.name}}</text>
     </view>
     <view class="p">
       <text class="p-name">单位：</text>
-      <text class="p-value">套</text>
+      <text class="p-value">{{detail.units}}</text>
     </view>
     <view class="p">
       <text class="p-name">商品分类：</text>
       <text class="p-value">宝宝服饰</text>
     </view>
-    <view class="p">
-      <text class="p-name">颜色：</text>
-      <view class="p-options">
-        <van-button class="p-options-item" type="default" plain size="mini">红色</van-button>
-        <van-button class="p-options-item" type="default" plain size="mini">黄色</van-button>
-        <van-button class="p-options-item" type="primary" plain size="mini">桔色</van-button>
+    <block wx:for="{{detail.specificationList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <view class="p">
+        <text class="p-name">{{item.name}}</text>
+        <view class="p-options">
+          <block wx:for="{{item.list}}" wx:for-index="cIndex" wx:for-item="cItem" wx:key="cIndex">
+            <van-button class="p-options-item" bindtap="onItemTap" type="{{cItem.checked ? 'primary' :'default'}}" plain size="mini" data-cindex="{{cIndex}}" data-index="{{index}}" data-id="{{cItem.id}}">
+              {{cItem.name}}
+            </van-button>
+          </block>
+        </view>
       </view>
-    </view>
-    <view class="p">
-      <text class="p-name">参考身高：</text>
-       <view class="p-options">
-        <van-button class="p-options-item" type="default" plain size="mini">59cm</van-button>
-        <van-button class="p-options-item" type="primary" plain size="mini">66cm</van-button>
-        <van-button class="p-options-item" type="default" plain size="mini">73cm</van-button>
-        <van-button class="p-options-item" type="default" plain size="mini">80cm</van-button>
-      </view>
-    </view>
+    </block>
     <view class="p">
       <text class="p-name">销售价：</text>
-      <text class="p-price">¥1200.00</text>
+      <text class="p-price">¥{{detail.salesPrice}}</text>
     </view>
     <view class="p">
       <text class="p-name">优惠价：</text>
-      <text class="p-discount">¥1200.00</text>
+      <text class="p-discount" hidden="{{skuPrice === null}}">¥{{skuPrice }}</text>
+      <text class="p-discount" hidden="{{skuPrice !== null}}">¥{{detail.preferentialPrice}}</text>
     </view>
     <view class="p">
       <text class="p-name">生产厂家：</text>
-      <text class="p-value">广东省广州市</text>
+      <text class="p-value">{{detail.address}}</text>
     </view>
     <view class="p">
       <text class="p-name">关联中心：</text>
@@ -58,31 +54,28 @@
     </view>
     <view class="p">
       <text class="p-name">订单类型：</text>
-       <view class="p-options">
-        <van-button class="p-options-item" type="default" plain size="mini">自提</van-button>
-        <van-button class="p-options-item" type="primary" plain size="mini">中心使用</van-button>
+      <view class="p-options">
+        <van-button class="p-options-item" data-type="1" bindtap="onOrderTypeChange" type="{{orderType==='1'?'primary':'default'}}" plain size="mini">
+          自提
+        </van-button>
+        <van-button class="p-options-item" data-type="2" bindtap="onOrderTypeChange" type="{{orderType==='2'?'primary':'default'}}" plain size="mini">
+          中心使用
+        </van-button>
       </view>
     </view>
   </view>
   <view class="line"></view>
   <view class="stepper">
     <view class="p-title">购买数量</view>
-    <van-stepper value="{{ 1 }}" bind:change="onChange" disable-input="{{true}}"/>
+    <van-stepper value="{{ goodsNumber }}" bind:change="onNumberChange" disable-input="{{true}}" />
   </view>
   <van-goods-action>
     <view class="total-money">
       <text>合计：</text>
-      <text class="money">¥6666.66</text>
+      <text class="money">¥{{totalMoney}}</text>
     </view>
-    <van-goods-action-button
-      text="加入购物车"
-      type="warning"
-      bind:click="onClickButton"
-    />
-    <van-goods-action-button
-      text="立即下单"
-      bind:click="onClickButton"
-    />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="onCart" />
+    <van-goods-action-button text="立即下单" bind:click="onBuy" />
   </van-goods-action>
   <cart-enter class="cart-enter"></cart-enter>
 </view>

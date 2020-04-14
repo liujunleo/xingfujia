@@ -1,18 +1,18 @@
 <view class="container">
-  <van-tabs animated border="{{false}}">
+  <van-tabs animated border="{{false}}" bind:change="onTabsChange">
     <van-tab title="商品">
       <van-search value="{{searchText}}" placeholder="请输入您想要搜索的商品" bindsearch="onSearch"></van-search>
       <view class="tab-body">
         <view class="tab-sidebar">
-          <van-sidebar active-key="{{ activeKey }}" bind:change="onGoodsChange">
+          <van-sidebar active-key="{{ categoryId }}" bind:change="onChange">
             <van-sidebar-item title="全部" />
-            <block wx:for="{{goodsType}}" wx:for-index="index" wx:for-item="item">
+            <block wx:for="{{typeList}}" wx:for-index="index" wx:for-item="item">
               <van-sidebar-item title="{{item.name}}" />
             </block>
           </van-sidebar>
         </view>
         <view class="tab-list">
-          <block wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item">
+          <block wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
             <goods-item class="goods-item" data="{{item}}"></goods-item>
           </block>
         </view>
@@ -22,16 +22,17 @@
       <van-search value="{{searchText}}" placeholder="请输入您想要搜索的服务" bindsearch="onSearch"></van-search>
       <view class="tab-body">
         <view class="tab-sidebar">
-          <van-sidebar active-key="{{ activeKey }}" bind:change="onServiceChange">
+          <van-sidebar active-key="{{ categoryId }}" bind:change="onChange">
             <van-sidebar-item title="全部" />
-            <van-sidebar-item title="针灸" />
-            <van-sidebar-item title="按摩" />
+            <block wx:for="{{typeList}}" wx:for-index="index" wx:for-item="item">
+              <van-sidebar-item title="{{item.name}}" />
+            </block>
           </van-sidebar>
         </view>
         <view class="tab-list">
-          <service-item class="service-item"></service-item>
-          <service-item class="service-item"></service-item>
-          <service-item class="service-item"></service-item>
+          <block wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+            <service-item class="service-item" data="{{item}}"></service-item>
+          </block>
         </view>
       </view>
     </van-tab>

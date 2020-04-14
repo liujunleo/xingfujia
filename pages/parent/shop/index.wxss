@@ -13,6 +13,7 @@ page {
 .tab-list {
   width: 100%;
   padding: 20rpx;
+  padding-bottom: 100rpx;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

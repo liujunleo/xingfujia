@@ -21,7 +21,7 @@ Component({
   methods: {
     onItemTap() {
       wx.navigateTo({
-        url: "../../parent/shop/goodsDetails"
+        url: `../../parent/shop/goodsDetails?id=${this.properties.data.id}`
       });
     }
   }

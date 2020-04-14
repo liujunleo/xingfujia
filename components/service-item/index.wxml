@@ -1,9 +1,9 @@
 <button class="btn-none" hover-class="btn-none__hover" bindtap="onItemTap">
   <view class="service-item">
-    <image class="photo" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584549429555&di=2db3c89d989955f2df0a2f2b15c45373&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180114%2F52e4c08d2569473583a993f4829dc127.jpeg" mode="scaleToFill"></image>
+    <image class="photo" src="{{data.pic}}" mode="scaleToFill"></image>
     <view class="content">
-      <view class="name">宝宝全身按摩</view>
-      <view class="desc">服务内容：为宝宝健康成长提供全身服务</view>
+      <view class="name">{{data.name}}</view>
+      <view class="desc">服务内容：{{data.countent}}</view>
     </view>
   </view>
-</button> 
+</button>
