@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/parent/index/index",
+    "pages/parent/createStation/index",
     "pages/parent/shop/index",
     "pages/parent/shop/goodsDetails",
     "pages/parent/my/userInfo/index",
     "pages/teacher/userInfo/index",
-    "pages/parent/index/index",
     "pages/parent/login/index",
     "pages/parent/cart/index",
     "pages/parent/my/wallet/index",
@@ -24,7 +25,6 @@
     "pages/parent/my/additionalServices/index",
     "pages/parent/shop/serviceDetails",
     "pages/parent/storeList/details",
-    "pages/parent/createStation/index",
     "pages/teacher/login/index",
     "pages/parent/teacherList/index",
     "pages/parent/storeList/index",

@@ -1,7 +1,10 @@
 var app = getApp();
 Page({
   data: {
+    page: 1,
+    limit: 8,
     total: 0,
+    list: [],
     checkAll: false,
     startX: 0,
     startY: 0,
@@ -40,8 +43,14 @@ Page({
     // cartList:[]
   },
   onLoad: function() {
+    const params = {
+      categoryId: this.data.categoryId,
+      limit: this.data.limit,
+      name: this.data.searchText,
+      page: this.data.page
+    };
     app
-      .get(`jzmk/jzmkcart/list`)
+      .post(`jzmk/jzmkcart/list`,parmas)
       .then(res => {
         debugger;
       })

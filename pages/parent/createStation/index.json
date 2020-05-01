@@ -1,6 +1,9 @@
 {
+  "navigationBarTitleText": "申请建站",
   "usingComponents": {
     "van-field": "../../assets/vant/field",
+     "van-dropdown-menu": "../../assets/vant/dropdown-menu/index",
+  "van-dropdown-item": "../../assets/vant/dropdown-item/index",
     "van-button": "../../assets/vant/button"
   }
 }

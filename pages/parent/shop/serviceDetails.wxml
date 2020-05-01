@@ -17,7 +17,7 @@
     </view>
     <view class="p">
       <text class="p-name">服务分类：</text>
-      <text class="p-value">按摩</text>
+      <text class="p-value">{{detail.ptmkServerCategoryEntity.name}}</text>
     </view>
     <view class="p">
       <text class="p-name">服务内容：</text>

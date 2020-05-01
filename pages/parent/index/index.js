@@ -1,9 +1,13 @@
-// pages/common/userType/index.js
+var app = getApp();
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    page: 1,
+    limit: 3,
+    list: [],
+    //
     current: 0,
     currentIndex: 0,
     banners: [
@@ -36,8 +40,7 @@ Page({
         address: "1对4试听课",
         station: "10月22日 00:00",
         number: 666,
-        cover:
-          "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
+        cover: "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
       },
       {
         id: 42,
@@ -45,8 +48,7 @@ Page({
         address: "1对4试听课",
         station: "10月22日 00:00",
         number: 666,
-        cover:
-          "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
+        cover: "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
       },
       {
         id: 42,
@@ -54,8 +56,7 @@ Page({
         address: "1对4试听课",
         station: "10月22日 00:00",
         number: 666,
-        cover:
-          "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
+        cover: "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
       }
     ],
     teachers: [
@@ -65,8 +66,7 @@ Page({
         address: "1对4试听课",
         station: "10月22日 00:00",
         number: 666,
-        cover:
-          "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
+        cover: "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
       },
       {
         id: 42,
@@ -74,8 +74,7 @@ Page({
         address: "1对4试听课",
         station: "10月22日 00:00",
         number: 666,
-        cover:
-          "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
+        cover: "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
       },
       {
         id: 42,
@@ -83,8 +82,7 @@ Page({
         address: "1对4试听课",
         station: "10月22日 00:00",
         number: 666,
-        cover:
-          "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
+        cover: "https://admin.yiyicareer.com/File/ClassroomBanner/25fa90fe41f23d5d4bae3c594326f965.png"
       }
     ]
   },
@@ -92,7 +90,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    this.getList();
+  },
   onShow() {
     wx.hideHomeButton();
     if (typeof this.getTabBar === "function" && this.getTabBar()) {
@@ -106,17 +106,17 @@ Page({
       currentIndex: e.detail.current
     });
   },
-  onHomeServiceClick(){
+  onHomeServiceClick() {
     wx.navigateTo({
       url: "../../parent/teacherList/index"
     });
   },
-  onStoreServiceClick(){
+  onStoreServiceClick() {
     wx.navigateTo({
       url: "../../parent/storeList/index"
     });
   },
-  onCreateStationClick(){
+  onCreateStationClick() {
     wx.navigateTo({
       url: "../../parent/createStation/index"
     });
@@ -125,11 +125,32 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {},
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {},
-
+  getList() {
+    const params = {
+      categoryId: this.data.categoryId,
+      limit: this.data.limit,
+      name: this.data.searchText,
+      page: this.data.page
+    };
+    const url = "/sjmk/sjmkuser/list";
+    app.loading();
+    app
+      .post(url, params)
+      .then(res => {
+        let list = this.data.list;
+        if (this.data.page == 1) {
+          this.setData({ list: res.data.list, total: res.data.totalCount });
+        } else {
+          list = list.concat(res.data.list || []);
+          this.setData({ list: list, total: res.data.totalCount });
+        }
+        app.hideLoading();
+      })
+      .catch(res => {
+        console.log("res", res);
+        app.hideLoading();
+      });
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

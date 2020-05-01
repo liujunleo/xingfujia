@@ -1,9 +1,16 @@
 <view class="container">
   <view class="form">
-    <van-field class="field" value="{{ phone }}" label="联系人" clearable placeholder="请输入联系人" border="{{ true }}" />
-    <van-field class="field" value="{{ phone }}" label="联系电话" clearable placeholder="请输入联系电话" border="{{ true }}" />
-    <van-field class="field" value="{{ phone }}" label="建站区域" clearable placeholder="请输入建站区域" border="{{ true }}" />
-    <van-button class="btn btn-large apply" bindtap="confirm">立刻申请</van-button>
+    <van-field class="field" bindinput="bindNameInput" value="{{ name }}" label="联系人" clearable placeholder="请输入联系人" border="{{ true }}" />
+    <van-field class="field" bindinput="bindWechatInput" value="{{ wechat }}" label="微信号" clearable placeholder="请输入微信号" border="{{ true }}" />
+    <van-field class="field" bindinput="bindPhoneInput" value="{{ phone }}" label="联系电话" clearable placeholder="请输入联系电话" border="{{ true }}" />
+    <view class="form-item">
+      <view>建站类型</view>
+      <van-dropdown-menu>
+        <van-dropdown-item value="{{ type }}" options="{{ typeOption }}" />
+      </van-dropdown-menu>
+    </view>
+    <van-field class="field" bindinput="bindAreaInput" value="{{ area }}" label="建站区域" clearable placeholder="请输入建站区域" border="{{ true }}" />
+    <van-button class="btn btn-large apply" bindtap="submit">立刻申请</van-button>
   </view>
   <view class="content">
     <view class="p">建站福利说明：</view>

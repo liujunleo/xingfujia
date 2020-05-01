@@ -34,11 +34,9 @@ App({
   // 获取缓存的session-验证是否有效
   getDataByStorage() {
     let token = wx.getStorageSync("token") || "";
-    let userId = wx.getStorageSync("userId") || "";
-    let user = wx.getStorageSync("user") || {};
+    let userInfo = wx.getStorageSync("userInfo") || {};
     this.globalData.token = token;
-    this.globalData.userId = userId;
-    this.globalData.user = user;
+    this.globalData.userInfo = userInfo;
   },
   // 设置用户相关信息
   setUser(userInfo) {
@@ -195,7 +193,6 @@ App({
     userInfo: {},
     // 1家长 2老师
     userType: 1,
-    userInfo: null,
     parantTabbar: {
       selected: 0,
       color: "#999999",

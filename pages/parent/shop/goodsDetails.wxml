@@ -21,7 +21,7 @@
     </view>
     <view class="p">
       <text class="p-name">商品分类：</text>
-      <text class="p-value">宝宝服饰</text>
+      <text class="p-value">{{detail.ptmkGoodsCategoryEntity.name}}</text>
     </view>
     <block wx:for="{{detail.specificationList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
       <view class="p">
@@ -47,10 +47,6 @@
     <view class="p">
       <text class="p-name">生产厂家：</text>
       <text class="p-value">{{detail.address}}</text>
-    </view>
-    <view class="p">
-      <text class="p-name">关联中心：</text>
-      <text class="p-value">佛山小牛中心</text>
     </view>
     <view class="p">
       <text class="p-name">订单类型：</text>

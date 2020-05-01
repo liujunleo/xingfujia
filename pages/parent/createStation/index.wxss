@@ -26,3 +26,35 @@
   color: #666;
   text-indent: 60rpx;
 }
+.form-item {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  padding: var(--cell-vertical-padding,10px) var(--cell-horizontal-padding,16px);
+}
+.form-item::after {
+  position: absolute;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  content: " ";
+  pointer-events: none;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 16px;
+  border-bottom: 1px solid #ebedf0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+
+.form-item > view {
+  width: 90px;
+}
+.van-dropdown-menu {
+  height: auto !important;
+  border: 0;
+}
+.van-dropdown-menu__title {
+  padding-left: 0 !important;
+}

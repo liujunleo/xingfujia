@@ -70,6 +70,7 @@ Page({
       .then(res => {
         app.globalData.token = res.data;
         wx.setStorageSync("token", res.data);
+        this.getUserInfoByToken();
         wx.switchTab({
           url: "/pages/parent/index/index"
         });
@@ -78,7 +79,16 @@ Page({
         console.log("res", res);
       });
   },
-
+  getUserInfoByToken() {
+    app
+      .get(`/jzmk/jzmkuser/selectUserInfo`)
+      .then(res => {
+        app.setUser(res.data);
+      })
+      .catch(res => {
+        console.log("res", res);
+      });
+  },
   // 倒计时60秒
   countDown(that, seconds) {
     if (seconds == 0 || !that.data.showCountDown) {
